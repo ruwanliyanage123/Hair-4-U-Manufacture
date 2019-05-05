@@ -21,11 +21,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
       }
     ]
   },
-  {
-    title: 'Manufacture',
-    icon: 'nb-home',
-    link: '/pages/manufacture'
-  },
+
+  // {
+  //   title: 'Manufacture',
+  //   icon: 'nb-home',
+  //   link: '/pages/manufacture'
+  // },
+
   {
     title: 'Saloon',
     icon: 'nb-home',
@@ -59,11 +61,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //     }
   //   ]
   // },
-  {
-    title: 'Charts',
-    icon: 'nb-bar-chart',
-    link: '/pages/charts/echarts'
-  },
+
+  // {
+  //   title: 'Charts',
+  //   icon: 'nb-bar-chart',
+  //   link: '/pages/charts/echarts'
+  // },
+
   {
     title: 'Editors',
     icon: 'nb-title',

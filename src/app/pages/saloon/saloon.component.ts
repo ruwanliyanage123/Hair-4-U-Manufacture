@@ -6,13 +6,7 @@ import { SaloonService } from './saloon.service';
   selector: 'ngx-saloon',
   styles: [],
   template: `
-    <ng2-smart-table
-      [settings]="settings"
-      (createConfirm)="addData($event)"
-      (editConfirm)="editData($event)"
-      (deleteConfirm)="deleteData($event)"
-      [source]="list"
-    ></ng2-smart-table>
+    <ng2-smart-table [settings]="settings" [source]="list"></ng2-smart-table>
   `
 })
 export class SaloonComponent implements OnInit {
@@ -30,31 +24,20 @@ export class SaloonComponent implements OnInit {
   }
 
   settings = {
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-      confirmCreate: true
+    hideSubHeader: true,
+
+    actions: {
+      add: false,
+      edit: false,
+      delete: false
     },
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-      confirmSave: true
-    },
-    delete: {
-      deleteButtonContent: '<i class="nb-trash"></i>',
-      confirmDelete: true
-    },
+
     columns: {
       shopname: {
         title: 'Shop Name'
       },
       ownername: {
         title: 'Owner Name'
-      },
-      nic: {
-        title: 'NIC'
       },
       contactnumber: {
         title: 'Contact Number'
@@ -64,50 +47,10 @@ export class SaloonComponent implements OnInit {
       },
       email: {
         title: 'Email'
+      },
+      stock: {
+        title: 'Stock(Kg)'
       }
     }
   };
-
-  addData(event) {
-    this.list.push(event.newData);
-    this.service.addSaloon({ saloon_list: this.list });
-  }
-
-  /**
-   * This function for store the changes in firebase
-   * first remove the previous data from the manu list
-   * after add the new changed data into manu array
-   * then manu array will store in the fitrebase
-   */
-  editData(event) {
-    if (window.confirm('Are you sure you want to save Changes?')) {
-      this.list = this.list.filter(obj => obj.nic !== event.data.nic);
-      this.list.push(event.newData);
-      this.service.addSaloon({ saloon_list: this.list }).subscribe(next => {
-        event.confirm.reject();
-      });
-      event.confirm.resolve(event.newData);
-    } else {
-      event.confirm.reject();
-    }
-  }
-
-  /**
-   * this function for delete table data. after clicking the delete option.
-   * ann event will pass after click the delete button.
-   * find the relavent nic by event.data.nic
-   * then remove the relavent object from the source array
-   * after remain array will store in the firebase.
-   */
-  deleteData(event) {
-    if (window.confirm('Are you sure you want to Delete?')) {
-      this.list = this.list.filter(obj => obj.nic !== event.data.nic);
-      this.service.addSaloon({ saloon_list: this.list }).subscribe(next => {
-        event.confirm.reject();
-      });
-      event.confirm.resolve(event.newData);
-    } else {
-      event.confirm.reject();
-    }
-  }
 }
