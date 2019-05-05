@@ -33,6 +33,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-home',
     link: '/pages/saloon'
   },
+
+  {
+    title: 'Designs',
+    icon: 'nb-star',
+    link: '/pages/design'
+  },
+
   // {
   //   title: 'Chats',
   //   icon: 'nb-star',
