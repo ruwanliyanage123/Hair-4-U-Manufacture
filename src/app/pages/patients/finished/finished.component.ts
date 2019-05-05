@@ -31,6 +31,8 @@ export class FinishedComponent implements OnInit {
       let patients_data = actionArray.payload.get('data');
       if (patients_data) {
         this.list = patients_data;
+        this.list = this.list.filter(obj => obj.level !== 'not-selected');
+        this.list = this.list.filter(obj => obj.level !== 'delivered');
       }
     });
   }
