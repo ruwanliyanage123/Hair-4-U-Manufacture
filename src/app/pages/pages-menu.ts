@@ -29,15 +29,25 @@ export const MENU_ITEMS: NbMenuItem[] = [
   // },
 
   {
-    title: 'Saloon',
-    icon: 'nb-home',
-    link: '/pages/saloon'
+    title: 'Designs',
+    icon: 'nb-star',
+    //link: '/pages/patients'
+    children: [
+      {
+        title: 'Create',
+        link: '/pages/design/create'
+      },
+      {
+        title: 'View',
+        link: '/pages/design/view'
+      }
+    ]
   },
 
   {
-    title: 'Designs',
-    icon: 'nb-star',
-    link: '/pages/design'
+    title: 'Saloon',
+    icon: 'nb-home',
+    link: '/pages/saloon'
   },
 
   // {
