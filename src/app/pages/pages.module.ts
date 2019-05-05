@@ -8,6 +8,7 @@ import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { DesignComponent } from './design/design.component';
 import { CreateComponent } from './design/create/create.component';
+import { ViewComponent } from './design/view/view.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -25,6 +26,7 @@ const PAGES_COMPONENTS = [
     ...PAGES_COMPONENTS,
     DesignComponent,
     CreateComponent,
+    ViewComponent,
     
     
   ],
