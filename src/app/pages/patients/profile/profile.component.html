@@ -29,30 +29,21 @@
       </table>
 
       <button
-        *ngIf="patients_for_dialog.level == 'not-selected'"
-        type="button"
-        class="btn btn-success btn-rounded"
-        (click)="addSelectLabel()"
-      >
-        Select
-      </button>
-
-      <button
         *ngIf="patients_for_dialog.level == 'waiting'"
         type="button"
-        class="btn btn-danger btn-rounded"
-        (click)="addRrejectLabel()"
+        class="btn btn-success btn-rounded"
+        (click)="addReadyLabel()"
       >
-        Reject
+        Ready
       </button>
 
       <button
         *ngIf="patients_for_dialog.level == 'ready'"
         type="button"
-        class="btn btn-primary btn-rounded"
-        (click)="addDeleveredLabel()"
+        class="btn btn-danger btn-rounded"
+        (click)="addWaitingLabel()"
       >
-        Deliver
+        waiting
       </button>
     </div>
   </mat-card-content>
