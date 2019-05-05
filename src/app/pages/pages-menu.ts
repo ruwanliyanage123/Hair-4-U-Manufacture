@@ -16,7 +16,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/patients/finished'
       },
       {
-        title: 'Wigs',
+        title: 'List',
         link: '/pages/patients/order'
       }
     ]

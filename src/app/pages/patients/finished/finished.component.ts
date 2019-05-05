@@ -62,6 +62,9 @@ export class FinishedComponent implements OnInit {
       hairstyle: {
         title: 'Hair Style'
       },
+      date: {
+        title: 'Delivery Date'
+      },
       level: {
         title: 'Level'
       }
