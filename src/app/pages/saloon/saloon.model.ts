@@ -5,4 +5,5 @@ export class Saloon {
   contactnumber: string;
   address: string;
   email: string;
+  stock: number;
 }

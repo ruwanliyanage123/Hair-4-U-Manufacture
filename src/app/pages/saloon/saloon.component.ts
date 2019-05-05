@@ -24,20 +24,14 @@ export class SaloonComponent implements OnInit {
   }
 
   settings = {
-    hideSubHeader: true,
-
     actions: {
       add: false,
       edit: false,
       delete: false
     },
-
     columns: {
       shopname: {
-        title: 'Shop Name'
-      },
-      ownername: {
-        title: 'Owner Name'
+        title: 'Saloon Name'
       },
       contactnumber: {
         title: 'Contact Number'
@@ -49,7 +43,8 @@ export class SaloonComponent implements OnInit {
         title: 'Email'
       },
       stock: {
-        title: 'Stock(Kg)'
+        title: 'Stock(Kg)',
+        sort: true
       }
     }
   };

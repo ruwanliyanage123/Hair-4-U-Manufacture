@@ -38,8 +38,6 @@ export class FinishedComponent implements OnInit {
   }
 
   settings = {
-    hideSubHeader: true,
-
     actions: {
       add: false,
       edit: false,
