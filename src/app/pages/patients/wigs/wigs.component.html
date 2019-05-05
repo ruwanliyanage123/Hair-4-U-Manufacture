@@ -1,0 +1,95 @@
+<div class="row">
+  <div class="col-md-4">
+    <mat-card>
+      <tr>
+        Waiting List
+      </tr>
+    </mat-card>
+
+    <mat-card *ngFor="let Contact of waiting_list">
+      <table class="table">
+        
+        <tr>
+          <td>Nic</td>
+          <td>{{ Contact.nic }}</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>{{ Contact.name }}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>{{ Contact.contactNumber }}</td>
+        </tr>
+        <tr>
+          <td>Deliver</td>
+          <td>2013/05/16</td>
+        </tr>
+      </table>
+
+    </mat-card>
+  </div>
+
+  <div class="col-md-4">
+      <mat-card>
+        <tr>
+          Ready List
+        </tr>
+      </mat-card>
+  
+      <mat-card *ngFor="let Contact of ready_list">
+        <table class="table">
+          
+          <tr>
+            <td>Nic</td>
+            <td>{{ Contact.nic }}</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>{{ Contact.name }}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{{ Contact.contactNumber }}</td>
+          </tr>
+          <tr>
+            <td>Deliver</td>
+            <td>2013/05/16</td>
+          </tr>
+        </table>
+  
+      </mat-card>
+  </div>
+
+  <div class="col-md-4">
+        <mat-card>
+          <tr>
+            Delivered List
+          </tr>
+        </mat-card>
+    
+        <mat-card *ngFor="let Contact of delivered_list">
+          <table class="table">
+            
+            <tr>
+              <td>Nic</td>
+              <td>{{ Contact.nic }}</td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>{{ Contact.name }}</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>{{ Contact.contactNumber }}</td>
+            </tr>
+            <tr>
+              <td>Deliver</td>
+              <td>2013/05/16</td>
+            </tr>
+          </table>
+    
+        </mat-card>
+  </div>
+
+</div>

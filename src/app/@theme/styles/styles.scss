@@ -1,0 +1,38 @@
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+//for add materials for the project
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+@import '~@nebular/bootstrap/styles/globals';
+@import '../../../../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-angular-schedule/styles/material.css';
+
+// ...
+
+// global app font size
+@import './font-size';
+
+// loading progress bar theme
+@import './pace.theme';
+
+// install the framework and custom global styles
+@include nb-install() {
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+  @include nb-bootstrap-global();
+
+  // loading progress bar
+  @include ngx-pace-theme();
+}
