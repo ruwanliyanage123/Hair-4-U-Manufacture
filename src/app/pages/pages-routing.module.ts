@@ -23,16 +23,7 @@ const routes: Routes = [
         path: 'scheduler',
         loadChildren: './scheduler/scheduler.module#SchedulerModule'
       },
-      /////////////for the desplay
-      // {
-      //   path: 'main',
-      //   loadChildren: './main/main.module#MainModule'
-      // },
-      // {
-      //   path: 'addpost',
-      //   loadChildren: './addposts/addposts.module#AddpostsModule'
-      // },
-      /////////////for the display
+
       {
         path: 'patients',
         loadChildren: './patients/patients.module#PatientsModule'
