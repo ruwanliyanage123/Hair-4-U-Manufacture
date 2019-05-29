@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0px;
   background: rgb(19, 23, 32); /* fallback for old browsers */
-  color: #fff;
+  color: rgb(247, 31, 31);
   font-family: 'poppins';
 }
 
@@ -109,7 +109,7 @@ form textarea {
   width: 100%;
   padding: 10px 0px;
   margin-bottom: 10px;
-  color: #fff;
+  color: rgb(50, 17, 235);
   border: none;
   border-bottom: 1px solid rgb(25, 18, 80);
 }
@@ -160,7 +160,7 @@ label.cover i {
 }
 
 form a {
-  color: #fff;
+  color: rgb(94, 15, 15);
   text-decoration: none;
 }
 

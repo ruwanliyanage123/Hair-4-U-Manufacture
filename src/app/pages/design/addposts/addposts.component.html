@@ -1,12 +1,12 @@
 <section class="addformsection">
   <br />
   <form (ngSubmit)="addPost(postsForm.value)" [formGroup]="postsForm">
-    <a routerLink="/"> <i class="fas fa-arrow-left"></i> Back</a>
-    <p>Fill the form to add a new post.</p>
-    <label for="title">Title:</label>
+    <h3 align="center">Fill those details for add a hair wig model</h3>
+
+    <label for="title">Model Name:</label>
     <input type="text" formControlName="title" />
 
-    <label for="content">Content:</label>
+    <label for="content">Description:</label>
     <textarea formControlName="content"></textarea>
 
     <label for="cover" class="cover"
@@ -20,7 +20,9 @@
       formControlName="cover"
     />
 
-    <input type="submit" [disabled]="!postsForm.valid" value="Submit" />
+    <div class="button">
+      <input type="submit" [disabled]="!postsForm.valid" value="Submit" />
+    </div>
   </form>
   <p class="percent" *ngIf="percentage">Uploading File: {{ percentage }} %</p>
 </section>
