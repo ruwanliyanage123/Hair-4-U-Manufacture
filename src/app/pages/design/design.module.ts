@@ -10,6 +10,12 @@ import { StorageBucket } from '@angular/fire/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddpostsModule } from './addposts/addposts.module';
 import { MainModule } from './main/main.module';
+import {
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [DesignComponent],
@@ -19,7 +25,8 @@ import { MainModule } from './main/main.module';
     FormsModule,
     ReactiveFormsModule,
     AddpostsModule,
-    MainModule
+    MainModule,
+    MatCardModule
   ],
   providers: [
     AngularFirestore,
