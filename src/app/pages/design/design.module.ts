@@ -7,10 +7,16 @@ import { MainComponent } from './main/main.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FireserviceService } from './fireservice.service';
 import { StorageBucket } from '@angular/fire/storage';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [DesignComponent, AddpostsComponent, MainComponent],
-  imports: [CommonModule, DesignRoutingModule],
+  imports: [
+    CommonModule,
+    DesignRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [
     AngularFirestore,
     FireserviceService,
