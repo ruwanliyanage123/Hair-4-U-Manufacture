@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DesignComponent } from './design.component';
-import { CreateComponent } from './create/create.component';
-import { ViewComponent } from './view/view.component';
+import { AddpostsComponent } from './addposts/addposts.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
@@ -11,11 +11,11 @@ const routes: Routes = [
     children: [
       {
         path: 'create',
-        component: CreateComponent
+        component: AddpostsComponent
       },
       {
         path: 'view',
-        component: ViewComponent
+        component: MainComponent
       }
     ]
   }
