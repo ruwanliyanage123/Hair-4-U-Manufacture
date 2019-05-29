@@ -21,6 +21,10 @@ import { environment } from '../environments/environment';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 
+import { AngularFirestore } from '@angular/fire/firestore'; // Firestore module
+import { ReactiveFormsModule } from '@angular/forms';
+import { StorageBucket } from '@angular/fire/storage';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -33,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     AngularFireStorageModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),

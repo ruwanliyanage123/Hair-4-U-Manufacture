@@ -4,9 +4,17 @@ import { DesignComponent } from './design.component';
 import { DesignRoutingModule } from './design-routing.module';
 import { AddpostsComponent } from './addposts/addposts.component';
 import { MainComponent } from './main/main.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { FireserviceService } from './fireservice.service';
+import { StorageBucket } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [DesignComponent, AddpostsComponent, MainComponent],
-  imports: [CommonModule, DesignRoutingModule]
+  imports: [CommonModule, DesignRoutingModule],
+  providers: [
+    AngularFirestore,
+    FireserviceService,
+    { provide: StorageBucket, useValue: 'gs://hairforyou-2b7f8.appspot.com/' }
+  ]
 })
 export class DesignModule {}
