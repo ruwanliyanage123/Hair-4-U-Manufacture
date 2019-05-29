@@ -6,7 +6,7 @@ import { CreateComponent } from './create/create.component';
 import { ViewComponent } from './view/view.component';
 
 @NgModule({
-  declarations: [DesignComponent, CreateComponent, ViewComponent],
+  declarations: [DesignComponent],
   imports: [CommonModule, DesignRoutingModule]
 })
 export class DesignModule {}
