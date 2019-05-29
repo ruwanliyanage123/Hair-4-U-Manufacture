@@ -8,6 +8,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FireserviceService } from './fireservice.service';
 import { StorageBucket } from '@angular/fire/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddpostsModule } from './addposts/addposts.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [DesignComponent],
@@ -15,7 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     DesignRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AddpostsModule,
+    MainModule
   ],
   providers: [
     AngularFirestore,

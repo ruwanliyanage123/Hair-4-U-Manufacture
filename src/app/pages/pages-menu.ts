@@ -29,7 +29,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   // },
 
   {
-    title: 'Designs',
+    title: 'Design',
     icon: 'nb-home',
     link: '/pages/design'
   },

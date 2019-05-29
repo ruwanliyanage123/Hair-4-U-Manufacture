@@ -5,8 +5,19 @@ import { AddpostsComponent } from './addposts/addposts.component';
 import { DesignComponent } from './design.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: './main/main.module#MainModule' },
-  { path: 'addpost', loadChildren: './addposts/addposts.module#AddpostsModule' }
+  {
+    path: '',
+    component: DesignComponent,
+    children: [
+      // { path: 'main', loadChildren: './main/main.module#MainModule' },
+      // {
+      //   path: 'addpost',
+      //   loadChildren: './addposts/addposts.module#AddpostsModule'
+      // }
+    ]
+  }
+  //   { path: '', loadChildren: './main/main.module#MainModule' },
+  //   { path: 'addpost', loadChildren: './addposts/addposts.module#AddpostsModule' }
 ];
 
 //const routes: Routes = [
