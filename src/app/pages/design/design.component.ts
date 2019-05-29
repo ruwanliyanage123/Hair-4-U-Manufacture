@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-design',
-  styles: [],
-  template: `
-    <router-outlet></router-outlet>
-  `
+  templateUrl: './design.component.html',
+  styleUrls: ['./design.component.scss']
 })
 export class DesignComponent implements OnInit {
   constructor() {}

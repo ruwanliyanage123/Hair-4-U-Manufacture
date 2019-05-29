@@ -1,25 +1,30 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DesignComponent } from './design.component';
-import { AddpostsComponent } from './addposts/addposts.component';
 import { MainComponent } from './main/main.component';
+import { AddpostsComponent } from './addposts/addposts.component';
+import { DesignComponent } from './design.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: DesignComponent,
-    children: [
-      {
-        path: 'create',
-        component: AddpostsComponent
-      },
-      {
-        path: 'view',
-        component: MainComponent
-      }
-    ]
-  }
+  { path: '', loadChildren: './main/main.module#MainModule' },
+  { path: 'addpost', loadChildren: './addposts/addposts.module#AddpostsModule' }
 ];
+
+//const routes: Routes = [
+// {
+//   path: '',
+//   component: MainComponent,
+//   children: [
+//     {
+//       path: 'addpost',
+//       component: AddpostsComponent
+//     }
+//     // {
+//     //   path: 'finished',
+//     //   component: FinishedComponent
+//     // }
+//   ]
+// }
+//];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

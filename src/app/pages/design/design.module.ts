@@ -10,7 +10,7 @@ import { StorageBucket } from '@angular/fire/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [DesignComponent, AddpostsComponent, MainComponent],
+  declarations: [DesignComponent],
   imports: [
     CommonModule,
     DesignRoutingModule,
