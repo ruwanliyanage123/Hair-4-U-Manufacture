@@ -6,7 +6,7 @@ import { FireserviceService } from '../fireservice.service';
 @Component({
   selector: 'app-addposts',
   templateUrl: './addposts.component.html',
-  styleUrls: ['./addposts.component.scss']
+  styleUrls: ['./addposts.component.css']
 })
 export class AddpostsComponent implements OnInit {
   constructor(private firestoreService: FireserviceService) {}
