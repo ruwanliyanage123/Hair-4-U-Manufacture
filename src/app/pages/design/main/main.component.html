@@ -4,11 +4,32 @@
       class="cover"
       [ngStyle]="{ 'background-image': 'url(' + post.data.cover + ')' }"
     ></div>
-    <h3 id="{{ post.id }}">
-      {{ post.data.title }}
-      <span (click)="deletePost(post.id, post.data.fileref)">Delete</span>
-    </h3>
+    <h4 id="{{ post.id }}">
+      <table>
+        <td>
+          <tr>
+            {{
+              post.data.title
+            }}
+          </tr>
+          <tr>
+            {{
+              post.data.content
+            }}
+          </tr>
+          <tr>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="deletePost(post.id, post.data.fileref)"
+            >
+              Delete
+            </button>
+          </tr>
+        </td>
+      </table>
+
+      <!-- <span (click)="deletePost(post.id, post.data.fileref)">Delete</span> -->
+    </h4>
   </div>
-</div> 
-
-
+</div>
