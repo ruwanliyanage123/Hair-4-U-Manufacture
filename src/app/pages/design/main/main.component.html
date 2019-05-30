@@ -4,18 +4,20 @@
       class="cover"
       [ngStyle]="{ 'background-image': 'url(' + post.data.cover + ')' }"
     ></div>
-    <h4 id="{{ post.id }}">
+    <div class="text" id="{{ post.id }}">
       <table>
         <td>
           <tr>
-            {{
-              post.data.title
-            }}
+            <h3>
+              <b>
+                {{ post.data.title }}
+              </b>
+            </h3>
           </tr>
           <tr>
-            {{
-              post.data.content
-            }}
+            <h6>
+              {{ post.data.content }}
+            </h6>
           </tr>
           <tr>
             <button
@@ -30,6 +32,6 @@
       </table>
 
       <!-- <span (click)="deletePost(post.id, post.data.fileref)">Delete</span> -->
-    </h4>
+    </div>
   </div>
 </div>
