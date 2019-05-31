@@ -25,9 +25,10 @@ import { AngularFirestore } from '@angular/fire/firestore'; // Firestore module
 import { ReactiveFormsModule } from '@angular/forms';
 import { StorageBucket } from '@angular/fire/storage';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SignInComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
