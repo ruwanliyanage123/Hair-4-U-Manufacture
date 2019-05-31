@@ -5,17 +5,29 @@
  */
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from './@core/utils/analytics.service';
-import { DayService, WeekService, WorkWeekService, MonthService, AgendaService } from '@syncfusion/ej2-angular-schedule';
+import {
+  DayService,
+  WeekService,
+  WorkWeekService,
+  MonthService,
+  AgendaService
+} from '@syncfusion/ej2-angular-schedule';
+import { AuthService } from './shared/services/auth.service';
 
 @Component({
   selector: 'ngx-app',
-  providers: [DayService, WeekService, WorkWeekService, MonthService, AgendaService],
-  template: '<router-outlet></router-outlet>',
+  providers: [
+    AuthService,
+    DayService,
+    WeekService,
+    WorkWeekService,
+    MonthService,
+    AgendaService
+  ],
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-
-  constructor(private analytics: AnalyticsService) {
-  }
+  constructor(private analytics: AnalyticsService) {}
 
   ngOnInit(): void {
     this.analytics.trackPageViews();
