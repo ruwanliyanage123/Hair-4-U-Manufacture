@@ -8,45 +8,48 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent
 } from '@nebular/auth';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
   {
     path: 'signup',
-    loadChildren: 'app/components/sign-up/sign-up.module#SignUpModule'
+    component: SignUpComponent
   },
-  {
-    path: 'auth',
-    component: NbAuthComponent,
-    children: [
-      {
-        path: '',
-        component: NbLoginComponent
-      },
-      {
-        path: 'login',
-        component: NbLoginComponent
-      },
-      {
-        path: 'register',
-        component: NbRegisterComponent
-      },
-      {
-        path: 'logout',
-        component: NbLogoutComponent
-      },
-      {
-        path: 'request-password',
-        component: NbRequestPasswordComponent
-      },
-      {
-        path: 'reset-password',
-        component: NbResetPasswordComponent
-      }
-    ]
-  },
-  { path: '', redirectTo: 'Pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'Pages' }
+
+  // {
+  //   path: 'auth',
+  //   component: NbAuthComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: NbLoginComponent
+  //     },
+  //     {
+  //       path: 'login',
+  //       component: NbLoginComponent
+  //     },
+  //     {
+  //       path: 'register',
+  //       component: NbRegisterComponent
+  //     },
+  //     {
+  //       path: 'logout',
+  //       component: NbLogoutComponent
+  //     },
+  //     {
+  //       path: 'request-password',
+  //       component: NbRequestPasswordComponent
+  //     },
+  //     {
+  //       path: 'reset-password',
+  //       component: NbResetPasswordComponent
+  //     }
+  //   ]
+  // },
+
+  { path: '', redirectTo: 'signup', pathMatch: 'full' },
+  { path: '**', redirectTo: 'signup' }
 ];
 
 const config: ExtraOptions = {
