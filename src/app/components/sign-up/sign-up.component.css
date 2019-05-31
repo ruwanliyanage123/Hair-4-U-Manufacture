@@ -65,7 +65,8 @@ h6 {
   display: table;
   width: 100%;
   height: 100%;
-  background: rgb(246, 247, 248);
+  background: #feffff;
+  margin-top: 100px;
 }
 
 .displayTableCell {
