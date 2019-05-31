@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore'; // Firestore module
 import { ReactiveFormsModule } from '@angular/forms';
 import { StorageBucket } from '@angular/fire/storage';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [AppComponent],
