@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'ngx-components',
   template: `
     <router-outlet></router-outlet>
-  `,
+  `
 })
-export class ExtraComponentsComponent {
-}
+export class ExtraComponentsComponent {}

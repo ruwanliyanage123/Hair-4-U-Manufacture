@@ -40,18 +40,18 @@
                   <button
                     mat-button
                     color="accent"
-                    (click)="editToInVisible(post.id, post.data.fileref)"
+                    (click)="editToInVisible(post.id)"
                   >
-                    Invisible
+                    State
                   </button>
                 </div>
                 <div *ngIf="itInVisble()">
                   <button
                     mat-button
                     color="accent"
-                    (click)="editToVisible(post.id, post.data.fileref)"
+                    (click)="editToVisible(post.id)"
                   >
-                    VIsible
+                    State
                   </button>
                 </div>
               </div>
