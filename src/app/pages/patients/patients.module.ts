@@ -20,9 +20,10 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MeasuresComponent } from './measures/measures.component';
 
 @NgModule({
-  declarations: [PatientsComponent, FinishedComponent, ProfileComponent],
+  declarations: [PatientsComponent, FinishedComponent, ProfileComponent, MeasuresComponent],
   imports: [
     CommonModule,
     PatientsRoutingModule,
