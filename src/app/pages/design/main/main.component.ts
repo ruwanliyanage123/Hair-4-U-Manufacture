@@ -27,6 +27,16 @@ export class MainComponent implements OnInit {
     }
   }
 
+  //this funciton is used for changes visibility to invisibility
+  editToInVisible(id:string) {
+    this.firestoreService.editInvisible(id);
+  }
+
+  //this funciton is used for changes visibility to invisibility
+  editToVisible(id:string) {
+    this.firestoreService.editvisible(id);
+  }
+
   getPosts() {
     this.firestoreService.getPosts().subscribe(posts => {
       this.posts = [];

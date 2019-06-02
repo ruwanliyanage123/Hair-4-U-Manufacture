@@ -37,6 +37,25 @@ export class FireserviceService {
     return this.firestore.collection('posts').snapshotChanges();
   }
 
+
+  //edot the posts
+  public editInvisible(docID:string){
+    //get the reference to the status
+    this.firestore
+    .collection('posts')
+    .doc(docID)
+   .update({status:"false"})
+  }
+
+  //edot the posts
+  public editvisible(docID:string){
+    //get the reference to the status
+    this.firestore
+    .collection('posts')
+    .doc(docID)
+   .update({status:"true"})
+  }
+
   //delete the post
   public deletePost(docID: string, image: string) {
     //get the reference to the image
