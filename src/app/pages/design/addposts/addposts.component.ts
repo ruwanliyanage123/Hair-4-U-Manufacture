@@ -12,6 +12,8 @@ export class AddpostsComponent implements OnInit {
   constructor(private firestoreService: FireserviceService) {}
 
   image: any = null; //list of files
+  visibility: String = 'true';
+
   percentage: any = this.firestoreService.percentage;
   public postsForm = new FormGroup({
     title: new FormControl('', Validators.required),
@@ -27,7 +29,7 @@ export class AddpostsComponent implements OnInit {
 
   //submit
   public addPost(data: FormData) {
-    this.firestoreService.createPost(data, this.image);
+    this.firestoreService.createPost(data, this.visibility, this.image);
   }
 
   ngOnInit() {

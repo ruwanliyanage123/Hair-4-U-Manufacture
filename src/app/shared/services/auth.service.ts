@@ -40,7 +40,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then(result => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['pages']);
         });
         this.SetUserData(result.user);
       })
@@ -100,7 +100,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(result => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['pages']);
         });
         this.SetUserData(result.user);
       })

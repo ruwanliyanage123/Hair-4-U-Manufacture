@@ -19,6 +19,7 @@ export class FireserviceService {
 
   uploadPercent: Observable<number>;
   downloadURL: Observable<string>;
+  visible: String;
 
   public percentage: any;
 
@@ -63,9 +64,11 @@ export class FireserviceService {
 
   // follow https://github.com/angular/angularfire2/blob/master/docs/storage/storage.md
 
-  createPost(postData: FormData, file: any[]) {
+  createPost(postData: FormData, visibility: String, file: any[]) {
     // console.log(file);
     const image = file[0];
+
+    this.visible = visibility;
 
     //loop through the files array of objects in case of multiple images
 
@@ -98,6 +101,7 @@ export class FireserviceService {
               title: postData['title'],
               content: postData['content'],
               cover: this.downloadURL,
+              status: this.visible,
               fileref: filepath
             };
 

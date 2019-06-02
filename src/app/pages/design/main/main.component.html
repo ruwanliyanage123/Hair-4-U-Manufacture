@@ -20,13 +20,27 @@
             </h6>
           </tr>
           <tr>
-            <button
-              mat-raised-button
-              color="warn"
-              (click)="deletePost(post.id, post.data.fileref)"
-            >
-              Delete
-            </button>
+            <td>
+              <div class="delete">
+                <button
+                  mat-raised-button
+                  color="warn"
+                  (click)="deletePost(post.id, post.data.fileref)"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+            <td>
+              <div class="vilibility">
+                <div *ngIf="itVisble()">
+                  <button mat-button color="accent">Invisible</button>
+                </div>
+                <div *ngIf="itInVisble()">
+                  <button mat-button color="accent">VIsible</button>
+                </div>
+              </div>
+            </td>
           </tr>
         </td>
       </table>

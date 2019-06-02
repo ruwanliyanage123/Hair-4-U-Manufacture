@@ -3,7 +3,7 @@
   <form (ngSubmit)="addPost(postsForm.value)" [formGroup]="postsForm">
     <h3 align="center">Fill those details for add a hair wig model</h3>
 
-    <label for="title">Model Name:</label>
+    <label for="title">Style:</label>
     <input type="text" formControlName="title" />
 
     <label for="content">Description:</label>
@@ -12,6 +12,7 @@
     <label for="cover" class="cover"
       ><i class="fas fa-upload"></i> Choose a file</label
     >
+
     <input
       type="file"
       name="cover"

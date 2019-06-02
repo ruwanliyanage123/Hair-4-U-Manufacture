@@ -36,8 +36,8 @@ const routes: Routes = [
     component: VerifyEmailComponent
     //canActivate: [SecureInnerPagesGuard]
   },
-  { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
-  { path: '**', redirectTo: 'sign-in' }
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: 'dashboard' }
 ];
 
 const config: ExtraOptions = {
