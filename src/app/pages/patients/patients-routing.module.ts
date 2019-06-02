@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PatientsComponent } from './patients.component';
 import { FinishedComponent } from './finished/finished.component';
 import { WigsComponent } from './wigs/wigs.component';
+import { MeasuresComponent } from './measures/measures.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'finished',
         component: FinishedComponent
+      },
+      {
+        path: 'measures',
+        component: MeasuresComponent
       }
     ]
   }

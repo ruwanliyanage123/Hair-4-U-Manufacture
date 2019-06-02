@@ -18,6 +18,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'List',
         link: '/pages/patients/order'
+      },
+      {
+        title: 'Measurement',
+        link: '/pages/patients/measures'
       }
     ]
   },
