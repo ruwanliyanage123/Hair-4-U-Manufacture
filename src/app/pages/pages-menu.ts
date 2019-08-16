@@ -58,7 +58,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Saloon',
     icon: 'nb-home',
     link: '/pages/saloon'
-  },
+  }
 
   // {
   //   title: 'Chats',
@@ -95,11 +95,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   link: '/pages/charts/echarts'
   // },
 
-  {
-    title: 'Editors',
-    icon: 'nb-title',
-    link: '/pages/editors/ckeditor'
-  }
+  // {
+  //   title: 'Editors',
+  //   icon: 'nb-title',
+  //   link: '/pages/editors/ckeditor'
+  // }
   // {
   //   title: 'Tables',
   //   icon: 'nb-tables',

@@ -41,10 +41,6 @@ export class SaloonComponent implements OnInit {
       },
       email: {
         title: 'Email'
-      },
-      stock: {
-        title: 'Stock(Kg)',
-        sort: true
       }
     }
   };
