@@ -6,6 +6,7 @@ import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
+import { EmailsComponent } from './emails/emails.component';
 
 const PAGES_COMPONENTS = [PagesComponent];
 

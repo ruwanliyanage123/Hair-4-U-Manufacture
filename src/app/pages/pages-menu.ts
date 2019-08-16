@@ -58,6 +58,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Saloon',
     icon: 'nb-home',
     link: '/pages/saloon'
+  },
+  {
+    title: 'Emails',
+    icon: 'nb-home',
+    link: '/pages/emails'
   }
 
   // {

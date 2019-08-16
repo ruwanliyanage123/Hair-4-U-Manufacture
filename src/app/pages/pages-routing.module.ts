@@ -37,6 +37,10 @@ const routes: Routes = [
         loadChildren: './saloon/saloon.module#SaloonModule'
       },
       {
+        path: 'emails',
+        loadChildren: './emails/emails.module#EmailsModule'
+      },
+      {
         path: 'design',
         loadChildren: './design/design.module#DesignModule'
       },
